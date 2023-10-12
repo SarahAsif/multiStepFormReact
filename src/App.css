@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+.multi-page-form {
+  max-width: 70vw;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  text-align: justify;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.inputin {
+  width: 60%;
+  border: none;
+  border-bottom: #009FDF 1px solid;
+  height: 40px;
+  background: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputin:checked {
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+label {
+  display: flex;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+input,
+textarea {
+  width: auto;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #009FDF;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.radio-label textarea {
+  display: none;
+}
+
+/* Symptom Table styles */
+.symptom-table {
+  margin-top: 20px;
+}
+
+.symptom-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.symptom-table th,
+.symptom-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.symptom-table th {
+  font-weight: bold;
+}
+
+.symptom-table td input[type="radio"] {
+  margin: 0;
+}
+
+.symptom-table td label {
+  display: block;
+}
+
+.symptom-table td label input[type="radio"] {
+  margin-right: 5px;
+}
+
+.symptom-table td:first-child {
+  font-weight: bold;
+}
+
+.yesno-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.numbers {
+  width: 10rem;
+  height: 3rem;
+  background: none;
+  border-bottom: #009FDF 1px solid;
+}
+
+/* Styles for the cute toggle switch */
+.toggle-container {
+  display: flex;
+  justify-content: space-around;
+  line-height: 100px;
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.toggle-switch label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 33px;
+}
+
+.toggle-switch label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.toggle-switch input:checked+.toggle-slider {
+  background-color: #AEAEAE;
+}
+
+.toggle-switch input:focus+.toggle-slider {
+  box-shadow: 0 0 1px #AEAEAE;
+}
+
+.toggle-switch input:checked+.toggle-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.toggle-label {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.container-inputs {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.med-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  line-height: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+.medication-input input[type="text"] {
+  width: 30rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+h2 {
+  text-align: center;
+}   
